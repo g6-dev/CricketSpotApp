@@ -1,0 +1,37 @@
+<ion-header >
+  <ion-toolbar color="medium" >
+      <div text-center>
+          <img alt="CrickSpot Logo" src="assets/icon/logo.jpg" id=image>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding ng-controller="PopupCtrl">
+  <br>
+  <ion-list >
+    <ion-text id=text>Enter Your Team Name</ion-text>
+    <ion-item >
+        <ion-input color="success" [(ngModel)]="teamname" type="text" placeholder="Team Name"></ion-input>
+    </ion-item>
+    <br>
+    <ion-text id=text>Enter Recommended Age For Player</ion-text>
+    <ion-item >
+        <ion-input color="success" [(ngModel)]="ageRec" type="number" placeholder="Rec Age"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div text-end>
+      <ion-button id=create style="width:200px; height: 50px;" color="success" [disabled]="!teamname || !ageRec" (click)="create()">
+          <ion-icon id=iconpadding name="checkmark-circle-outline"></ion-icon>
+       Create
+      </ion-button>
+  </div>
+
+  <div text-end>
+      <ion-button id=back style="width:100px; height: 50px;" color="success" routerLink="/user-account" (click)="goBack()">
+       Go Back
+      </ion-button>
+  </div>
+
+</ion-content>

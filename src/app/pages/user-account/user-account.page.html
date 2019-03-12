@@ -1,0 +1,27 @@
+<ion-header >
+  <ion-toolbar color="medium" >
+      <div text-center>
+          <img alt="CrickSpot Logo" src="assets/icon/logo.jpg" id=image>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+<div text-center>
+  <ion-button id=create style="width:280px; height: 50px;" color="success" routerLink="/create-team" (click)="create_team()">
+   Create Your Team
+  </ion-button>
+</div>
+
+
+<div text-center>
+  <ion-button id=players style="width:280px; height: 50px;" color="success" routerLink="/" (click)="view_players()">
+   View Players
+  </ion-button>
+</div>
+
+
+<div text-center>
+  <ion-button id=askchellange style="width:280px; height: 50px;" color="success" routerLink="/" (click)="ask_chellange()">
+   Ask Chellange
+  </ion-button>
+</div>
