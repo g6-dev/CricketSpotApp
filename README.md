@@ -2,4 +2,4 @@
 
 Hi all,
 
-We are G6 Developers.
+We are G6 Developers.🏏
