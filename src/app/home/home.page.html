@@ -18,7 +18,7 @@
   <br>
 
   <div text-end>
-  <ion-button id=login style="width:180px; height: 50px;" fill="outline" color="success" [disabled]="!name || !password" (click)="login()">
+  <ion-button id=login style="width:180px; height: 50px;" fill="outline" color="success" [disabled]="!name || !password" routerLink="/user-account" (click)="login()">
     <ion-icon slot="start" id=padding name="checkmark-circle-outline"></ion-icon>Login
   </ion-button>
   </div>
