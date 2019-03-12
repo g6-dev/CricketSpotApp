@@ -1,5 +1,7 @@
 {
   "name": "CrickSpotApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

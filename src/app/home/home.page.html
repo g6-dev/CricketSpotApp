@@ -1,12 +1,39 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+
+ <ion-header >
+  <ion-toolbar color="medium" >
+      <div text-center>
+          <img alt="CrickSpot Logo" src="assets/icon/logo.jpg" id=image>
+      </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+<ion-content padding> 
+<ion-list>
+  <ion-item id=input >
+      <ion-input color="success" type="text" [(ngModel)]="name" placeholder="Username"><ion-icon slot="expand" color="success" id=iconpadding name="contact"></ion-icon></ion-input>
+  </ion-item>
+  <ion-item id=input>
+      <ion-input color="success" type="password" [(ngModel)]="password" placeholder="Passwod" ><ion-icon slot="expand" color="success" id=iconpadding name="lock"></ion-icon></ion-input>
+  </ion-item>
+  <br>
+
+  <div text-end>
+  <ion-button id=login style="width:180px; height: 50px;" fill="outline" color="success" [disabled]="!name || !password" (click)="login()">
+    <ion-icon slot="start" id=padding name="checkmark-circle-outline"></ion-icon>Login
+  </ion-button>
+  </div>
+
+  <div id=create>
+  <p>Don't have an account?</p>
+  <ion-button expand="full" color="light" routerLink="/create-account" (click)="create()">
+    <ion-icon slot="start" id=padding name="person-add"></ion-icon> Create Account
+  </ion-button>
+  </div> 
+
+  <div id=aboutus text-center>
+    <ion-button fill="fill" color="light" routerLink="/aboutus" (click)="aboutus()"><ion-icon name="information-circle-outline" id=padding2></ion-icon>
+     About us</ion-button>
+  </div>
+
+</ion-list>
 </ion-content>

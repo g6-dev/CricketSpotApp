@@ -1,0 +1,51 @@
+<ion-header >
+  <ion-toolbar color="medium" >
+      <div text-center>
+          <img alt="CrickSpot Logo" src="assets/icon/logo.jpg" id=image>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding ng-controller="PopupCtrl">
+  <br>
+  <ion-list >
+    <ion-item id=input >
+        <ion-input color="success" [(ngModel)]="name" type="text" placeholder="Name"></ion-input>
+    </ion-item>
+
+    <ion-item id=input>
+        <ion-input color="success" [(ngModel)]="username" type="text" placeholder="UserName"></ion-input>
+    </ion-item>
+
+    <ion-item id=input >
+      <ion-input color="success" [(ngModel)]="mail"  type="E-Mail" placeholder="E-Mail address"></ion-input>
+    </ion-item>
+
+    <ion-item id=input>
+      <ion-input color="success" [(ngModel)]="age" type="number" placeholder="age"></ion-input>
+    </ion-item>
+
+    <ion-item id=input>
+      <ion-input color="success" [(ngModel)]="password" type="text" placeholder="Password" >
+      </ion-input><ion-icon name="eye"></ion-icon>
+    </ion-item>
+
+    <ion-item id=input >
+      <ion-input color="success" [(ngModel)]="cnpassword" type="Password" placeholder="Conform Password">
+      </ion-input><ion-icon name="eye-off"></ion-icon>
+    </ion-item>
+  
+    <div text-end>
+      <ion-button id=create style="width:180px; height: 50px;" fill="outline" color="success" [disabled]="!name || !username || !mail || !age || !password || !cnpassword" (click)="create()">
+        <ion-icon slot="start" id=padding name="checkmark-circle-outline"></ion-icon>Create
+      </ion-button>
+    </div>
+
+    <div text-end>
+        <ion-button id=back style="width:100px; height: 50px;" color="success" routerLink="/home" (click)="goBack()">
+         Go Back
+        </ion-button>
+    </div>
+      
+  </ion-list>
+</ion-content>
