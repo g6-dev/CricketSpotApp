@@ -10,33 +10,28 @@
   <br>
   <ion-list >
     <ion-item id=input >
-        <ion-input color="success" [(ngModel)]="name" type="text" placeholder="Name"></ion-input>
+      <ion-input color="success" [(ngModel)]='todo.name' type="text" placeholder="Name"></ion-input>
     </ion-item>
 
     <ion-item id=input>
-        <ion-input color="success" [(ngModel)]="username" type="text" placeholder="UserName"></ion-input>
+      <ion-input color="success" [(ngModel)]="todo.username" type="text" placeholder="UserName"></ion-input>
     </ion-item>
 
     <ion-item id=input >
-      <ion-input color="success" [(ngModel)]="mail"  type="E-Mail" placeholder="E-Mail address"></ion-input>
+      <ion-input color="success" [(ngModel)]="todo.mail"  type="E-Mail" placeholder="E-Mail address"></ion-input>
     </ion-item>
 
     <ion-item id=input>
-      <ion-input color="success" [(ngModel)]="age" type="number" placeholder="age"></ion-input>
+      <ion-input color="success" [(ngModel)]="todo.age" type="number" placeholder="age"></ion-input>
     </ion-item>
 
     <ion-item id=input>
-      <ion-input color="success" [(ngModel)]="password" type="text" placeholder="Password" >
+      <ion-input color="success" [(ngModel)]="todo.password" type="text" placeholder="Password" >
       </ion-input><ion-icon name="eye"></ion-icon>
-    </ion-item>
-
-    <ion-item id=input >
-      <ion-input color="success" [(ngModel)]="cnpassword" type="Password" placeholder="Conform Password">
-      </ion-input><ion-icon name="eye-off"></ion-icon>
     </ion-item>
   
     <div text-end>
-      <ion-button id=create style="width:180px; height: 50px;" fill="outline" color="success" [disabled]="!name || !username || !mail || !age || !password || !cnpassword" (click)="create()">
+      <ion-button id=create style="width:180px; height: 50px;" fill="outline" color="success" (click)="create()">
         <ion-icon slot="start" id=padding name="checkmark-circle-outline"></ion-icon>Create
       </ion-button>
     </div>
