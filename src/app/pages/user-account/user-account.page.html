@@ -6,22 +6,25 @@
   </ion-toolbar>
 </ion-header>
 
-<div text-center>
-  <ion-button id=create style="width:280px; height: 50px;" color="success" routerLink="/create-team" (click)="create_team()">
-   Create Your Team
-  </ion-button>
-</div>
+<ion-content padding ng-controller="PopupCtrl">
+  <br>
+
+<ion-list >
+    
+  <div text-center>
+    <ion-button  id=padding style="width:280px; height: 50px;" color="success" routerLink="/create-team" (click)="create_team()">
+     Your Team
+    </ion-button>
+  </div>
+  
+  <div text-center>
+    <ion-button id=padding style="width:280px; height: 50px;" color="success" routerLink="/" (click)="view_players()">
+     View Players
+    </ion-button>
+  </div>
+  
+</ion-list>
+
+</ion-content>
 
 
-<div text-center>
-  <ion-button id=players style="width:280px; height: 50px;" color="success" routerLink="/" (click)="view_players()">
-   View Players
-  </ion-button>
-</div>
-
-
-<div text-center>
-  <ion-button id=askchellange style="width:280px; height: 50px;" color="success" routerLink="/" (click)="ask_chellange()">
-   Ask Chellange
-  </ion-button>
-</div>

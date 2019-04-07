@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 export interface Todo {
   name: string ;
   username: string ;
-  mail: string ;
+  phone: number ;
   age: number ;
   password: string ;
 }

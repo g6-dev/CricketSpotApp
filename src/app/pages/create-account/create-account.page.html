@@ -18,11 +18,11 @@
     </ion-item>
 
     <ion-item id=input >
-      <ion-input color="success" [(ngModel)]="todo.mail"  type="E-Mail" placeholder="E-Mail address"></ion-input>
+      <ion-input color="success" [(ngModel)]="todo.phone"  type="number" placeholder="Telephone Number"></ion-input>
     </ion-item>
 
     <ion-item id=input>
-      <ion-input color="success" [(ngModel)]="todo.age" type="number" placeholder="age"></ion-input>
+      <ion-input color="success" [(ngModel)]="todo.age" type="number" placeholder="Age"></ion-input>
     </ion-item>
 
     <ion-item id=input>
@@ -30,8 +30,9 @@
       </ion-input><ion-icon name="eye"></ion-icon>
     </ion-item>
   
+
     <div text-end>
-      <ion-button id=create style="width:180px; height: 50px;" fill="outline" color="success" (click)="create()">
+      <ion-button id=create style="width:180px; height: 50px;" [disabled]="!todo.name || !todo.username || !todo.phone || !todo.age || !todo.password" fill="outline" color="success" (click)="create()">
         <ion-icon slot="start" id=padding name="checkmark-circle-outline"></ion-icon>Create
       </ion-button>
     </div>

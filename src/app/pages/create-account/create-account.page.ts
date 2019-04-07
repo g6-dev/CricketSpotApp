@@ -21,7 +21,7 @@ export class CreateAccountPage implements OnInit {
   todo: Todo = {
     name: 'wilson',
     username: 'wil',
-    mail: 'wil@mail',
+    phone: 11121,
     age: 17,
     password: 'pass123'
   };
@@ -36,7 +36,7 @@ export class CreateAccountPage implements OnInit {
 
     console.log("name :"+ this.todo.name);
     console.log("username :"+ this.todo.username);
-    console.log("mail :"+ this.todo.mail);
+    console.log("mail :"+ this.todo.phone);
     console.log("Age : "+ this.todo.age);
     console.log("password :" + this.todo.password);
   }
@@ -44,4 +44,5 @@ export class CreateAccountPage implements OnInit {
   goBack() {
     console.log('Need Action To Do');
   }
+  
 }
