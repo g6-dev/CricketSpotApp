@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo, TodoService } from 'src/app/services/todo.service';
+import { Player, DatabaseService } from 'src/app/services/database.service';
 import { ActivatedRoute } from '@angular/router';
 import { LoadingController, NavController } from '@ionic/angular';
 
@@ -8,20 +9,25 @@ import { LoadingController, NavController } from '@ionic/angular';
   templateUrl: './create-account.page.html',
   styleUrls: ['./create-account.page.scss'],
 })
+
 export class CreateAccountPage implements OnInit {
+
+  /* Values from <html> has been taken from here */
   /* name: string;
   username: string;
   mail: string;
   age: Number;
   password: string; */
 
-  constructor(public todoService: TodoService, public route: ActivatedRoute,
+  constructor(public databaseService: DatabaseService, public route: ActivatedRoute,
      public loadingController: LoadingController, public nav: NavController) {}
 
-  todo: Todo = {
+  /* An object of Todo is created here */
+  /* Values has been assigned for testing purpose and passed to <html> via <(ngModel)> */
+  player: Player = {
     name: 'wilson',
     username: 'wil',
-    phone: 11121,
+    phone: 1,
     age: 17,
     password: 'pass123'
   };
@@ -30,19 +36,28 @@ export class CreateAccountPage implements OnInit {
   }
 
   create() {
-    this.todoService.addTodo(this.todo);
-    /* Code for adding into database -> 
-    URL : https://console.firebase.google.com/project/crickspotg6dev/database/firestore/data~2Ftodos  */
+    /* Code for adding into database, database url ->
+    https://console.firebase.google.com/project/crickspotg6dev/database/firestore/data~2Ftodos  */
 
-    console.log("name :"+ this.todo.name);
-    console.log("username :"+ this.todo.username);
-    console.log("mail :"+ this.todo.phone);
-    console.log("Age : "+ this.todo.age);
-    console.log("password :" + this.todo.password);
+    // this.todoService.addTodo(this.todo);
+     this.databaseService.addPlayer(this.player);
+
+    /* Find Todo-Service in <services> */
+
+    /* console.log('Todo object => [' + this.todo.name + ', ' + this.todo.username +
+    ', ' + this.todo.phone + ', ' + this.todo.age + ', ' +
+    this.todo.password + ']'); */
+
+    console.log('Player object => [' + this.player.name + ', ' + this.player.username +
+    ', ' + this.player.phone + ', ' + this.player.age + ', ' +
+    this.player.password + ']');
+
+    console.log('Todo object is passed to firebase console. link:' +
+    'https://console.firebase.google.com/project/crickspotg6dev/database/firestore/data~2Ftodos');
   }
 
+  /* Go back to <home> page from <create-account> page */
   goBack() {
-    console.log('Need Action To Do');
+    console.log('Redirected to <home> page');
   }
-  
 }

@@ -3,8 +3,8 @@ import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/fires
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-/* Todo interface is created, simply an object */
-export interface Todo {
+/* Todo interface is created, simply a player object */
+export interface Player {
   name: string ;
   username: string ;
   phone: number ;
@@ -16,21 +16,21 @@ export interface Todo {
   providedIn: 'root'
 })
 
-export class TodoService {
+export class DatabaseService {
 
-  /* todosCollection list */
-  private todosCollection: AngularFirestoreCollection<Todo>;
+  /* playerCollection list retrieved from database*/
+  private playerCollection: AngularFirestoreCollection<Player>;
 
-  /* todo array, to store values in database */
-  private todos: Observable<Todo[]>;
+  /* playersList array, to store players retrieved from database */
+  private playersList: Observable<Player[]>;
 
   constructor(db: AngularFirestore) {
 
     /* Get the database values and assigned to collection */
-    this.todosCollection = db.collection<Todo>('todos');
+    this.playerCollection = db.collection<Player>('players');
 
     /* collection is assigned to array<Todo> */
-    this.todos = this.todosCollection.snapshotChanges().pipe(
+    this.playersList = this.playerCollection.snapshotChanges().pipe(
       map(actions => {
         return actions.map(a => {
           const data = a.payload.doc.data();
@@ -42,27 +42,28 @@ export class TodoService {
   }
 
   /* Get all the values from database as an array<Todo> */
-  getTodos() {
-    return this.todos;
+  getAllPlayers() {
+    return this.playersList;
   }
 
   /* Get value from database with the id passed as parameter */
-  getTodoId(id) {
-    return this.todosCollection.doc<Todo>(id).valueChanges();
+  getPlayerById(id) {
+    return this.playerCollection.doc<Player>(id).valueChanges();
   }
 
   /* Updating a value, by passing the Object and reference 'id' */
-  updateTodo(todo: Todo, id: string) {
-    return this.todosCollection.doc(id).update(todo);
+  updatePlayer(player: Player, id: string) {
+    return this.playerCollection.doc(id).update(player);
   }
 
   /* Add a value to the database, by passing the Object*/
-  addTodo(todo: Todo) {
-    return this.todosCollection.add(todo);
+  addPlayer(player: Player) {
+    return this.playerCollection.add(player);
   }
 
   /* Remove a vlue from the database, by passing the id as the parameter */
-  removeTodo(id) {
-    return this.todosCollection.doc(id).delete();
+  removePlayer(id) {
+    return this.playerCollection.doc(id).delete();
   }
 }
+

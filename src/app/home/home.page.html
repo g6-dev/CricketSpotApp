@@ -10,7 +10,7 @@
 <ion-content padding> 
 <ion-list>
   <ion-item id=input >
-      <ion-input color="success" type="text" [(ngModel)]="name" placeholder="Username"><ion-icon slot="expand" color="success" id=iconpadding name="contact"></ion-icon></ion-input>
+      <ion-input color="success" type="text" [(ngModel)]="username" placeholder="Username"><ion-icon slot="expand" color="success" id=iconpadding name="contact"></ion-icon></ion-input>
   </ion-item>
   <ion-item id=input>
       <ion-input color="success" type="password" [(ngModel)]="password" placeholder="Passwod" ><ion-icon slot="expand" color="success" id=iconpadding name="lock"></ion-icon></ion-input>
@@ -18,7 +18,7 @@
   <br>
 
   <div text-end>
-  <ion-button id=login style="width:180px; height: 50px;" fill="outline" color="success" [disabled]="!name || !password" routerLink="/user-account" (click)="login()">
+  <ion-button id=login style="width:180px; height: 50px;" fill="outline" color="success" [disabled]="!username || !password" routerLink="/user-account" (click)="login()">
     <ion-icon slot="start" id=padding name="checkmark-circle-outline"></ion-icon>Login
   </ion-button>
   </div>

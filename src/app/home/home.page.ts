@@ -6,19 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  username : string;
-  password : string;
+  username: string;
+  password: string;
 
-  login(){
-    console.log("name :"+this.username);
-    console.log("password :"+this.password);
+  /* Login button function comes here. */
+  /* TODO: Take all usernames from database and validate the user here */
+  /* TODO: Take the password and validate user here*/
+  login() {
+    console.log('name is ' + this.username + ' & password is ' + this.password);
+    console.log('Redirected to <user-account> page...');
   }
 
-  create(){
-    console.log("Need Action To Do");
+  /* New user before logging in, sign up here */
+  /* Page redirected to create account page */
+  create() {
+    console.log('Redirected to <create-account> page...');
   }
 
-  aboutus(){
-    console.log("Need Action To Do");
+  /* Application about page, redirected to about-us page */
+  aboutus() {
+    console.log('Redirected to <about-us> page...');
   }
 }
