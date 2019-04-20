@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-team',
@@ -7,16 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateTeamPage implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
 
-  create(){
-    console.log("Need Action to do");
+  createYourOwnTeam() {
+    console.log('Redirected to </myteam> page');
+    this.router.navigate(['/myteam']);
   }
 
-  goBack(){
-    console.log("Back to user home");
+  joinAnotherTeam() {
+    console.log('Yet in maintainance');
+  }
+
+  goBack() {
+    console.log('Redirected to </user-account> page');
+    this.router.navigate(['/user-account']);
   }
 }

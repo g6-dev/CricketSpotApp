@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo, TodoService } from 'src/app/services/todo.service';
+// import { Todo, TodoService } from 'src/app/services/todo.service';
 import { Player, DatabaseService } from 'src/app/services/database.service';
 import { ActivatedRoute } from '@angular/router';
 import { LoadingController, NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-account',
@@ -20,7 +21,8 @@ export class CreateAccountPage implements OnInit {
   password: string; */
 
   constructor(public databaseService: DatabaseService, public route: ActivatedRoute,
-     public loadingController: LoadingController, public nav: NavController) {}
+     public loadingController: LoadingController, public nav: NavController,
+     public router: Router) {}
 
   /* An object of Todo is created here */
   /* Values has been assigned for testing purpose and passed to <html> via <(ngModel)> */
@@ -59,5 +61,6 @@ export class CreateAccountPage implements OnInit {
   /* Go back to <home> page from <create-account> page */
   goBack() {
     console.log('Redirected to <home> page');
+    this.router.navigate(['/home']);
   }
 }

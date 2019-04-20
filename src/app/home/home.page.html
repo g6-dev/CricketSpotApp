@@ -18,20 +18,20 @@
   <br>
 
   <div text-end>
-  <ion-button id=login style="width:180px; height: 50px;" fill="outline" color="success" [disabled]="!username || !password" routerLink="/user-account" (click)="login()">
+  <ion-button id=login style="width:180px; height: 50px;" fill="outline" color="success" [disabled]="!username || !password" (click)="login()">
     <ion-icon slot="start" id=padding name="checkmark-circle-outline"></ion-icon>Login
   </ion-button>
   </div>
 
   <div id=create>
   <p>Don't have an account?</p>
-  <ion-button expand="full" color="light" routerLink="/create-account" (click)="create()">
+  <ion-button expand="full" color="light" (click)="create()">
     <ion-icon slot="start" id=padding name="person-add"></ion-icon> Create Account
   </ion-button>
   </div> 
 
   <div id=aboutus text-center>
-    <ion-button fill="fill" color="light" routerLink="/aboutus" (click)="aboutus()"><ion-icon name="information-circle-outline" id=padding2></ion-icon>
+    <ion-button fill="fill" color="light" (click)="aboutus()"><ion-icon name="information-circle-outline" id=padding2></ion-icon>
      About us</ion-button>
   </div>
 
