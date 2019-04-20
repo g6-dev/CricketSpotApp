@@ -7,8 +7,8 @@ import { map } from 'rxjs/operators';
 export interface Player {
   name: string ;
   username: string ;
-  phone: number ;
-  age: number ;
+  phone: string ;
+  age: string ;
   password: string ;
 }
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Player, DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-home',

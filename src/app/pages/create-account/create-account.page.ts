@@ -16,8 +16,8 @@ export class CreateAccountPage implements OnInit {
   /* Values from <html> has been taken from here */
   /* name: string;
   username: string;
-  mail: string;
-  age: Number;
+  phone: number;
+  age: number;
   password: string; */
 
   constructor(public databaseService: DatabaseService, public route: ActivatedRoute,
@@ -27,11 +27,11 @@ export class CreateAccountPage implements OnInit {
   /* An object of Todo is created here */
   /* Values has been assigned for testing purpose and passed to <html> via <(ngModel)> */
   player: Player = {
-    name: 'wilson',
-    username: 'wil',
-    phone: 1,
-    age: 17,
-    password: 'pass123'
+    name: '',
+    username: '',
+    phone: '',
+    age: '',
+    password: ''
   };
 
   ngOnInit() {
@@ -42,7 +42,8 @@ export class CreateAccountPage implements OnInit {
     https://console.firebase.google.com/project/crickspotg6dev/database/firestore/data~2Ftodos  */
 
     // this.todoService.addTodo(this.todo);
-     this.databaseService.addPlayer(this.player);
+
+    this.databaseService.addPlayer(this.player);
 
     /* Find Todo-Service in <services> */
 
