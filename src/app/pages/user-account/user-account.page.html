@@ -12,14 +12,20 @@
 <ion-list >
     
   <div text-center>
-    <ion-button  id=padding style="width:280px; height: 50px;" color="success" routerLink="/create-team" (click)="create_team()">
+    <ion-button  id=padding style="width:280px; height: 50px;" color="success" routerLink="/create-team" (click)="createTeam()">
      Your Team
     </ion-button>
   </div>
   
   <div text-center>
-    <ion-button id=padding style="width:280px; height: 50px;" color="success" routerLink="/" (click)="view_players()">
+    <ion-button id=padding style="width:280px; height: 50px;" color="success" (click)="viewPlayers()">
      View Players
+    </ion-button>
+  </div>
+
+  <div text-center>
+    <ion-button id=padding style="width:280px; height: 50px;" color="success" (click)="signOut()">
+     Sign Out
     </ion-button>
   </div>
   
