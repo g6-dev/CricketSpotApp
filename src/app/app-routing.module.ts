@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: 'aboutus', loadChildren: './pages/aboutus/aboutus.module#AboutusPageModule' },
   { path: 'create-team', loadChildren: './pages/create-team/create-team.module#CreateTeamPageModule' },
   { path: 'user-account', loadChildren: './pages/user-account/user-account.module#UserAccountPageModule' },
-  { path: 'myteam', loadChildren: './pages/myteam/myteam.module#MyteamPageModule' },
+  { path: 'myteam', loadChildren: './pages/myteam/myteam.module#MyteamPageModule' },  { path: 'add-score', loadChildren: './pages/add-score/add-score.module#AddScorePageModule' },
+
 ];
 
 @NgModule({

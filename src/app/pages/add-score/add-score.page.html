@@ -1,0 +1,132 @@
+<ion-header >
+  <ion-toolbar color="medium" >
+      <div text-center>
+          <img alt="CrickSpot Logo" src="assets/icon/logo.jpg" id=image>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    
+    <!--add players bowling and performance-->
+    <h3 id=head>Add Your Team Score Here</h3>
+    <hr>
+    <div >
+        <ion-input id=id color="success" [(ngModel)]='todo.Runs' type="number" placeholder="Runs"></ion-input>
+        <ion-input id=id2 color="success" [(ngModel)]='todo.Wick' type="number" placeholder="Wick"></ion-input>
+    </div>
+
+    <!--Batting Performance-->
+    <h3 id=head>Batting Performance</h3>
+    <hr>
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Batsman1' type="text" placeholder="Batsman 1 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='run1' type="number" placeholder="Runs"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Batsman2' type="text" placeholder="Batsman 2 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='run2' type="number" placeholder="Runs"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Batsman3' type="text" placeholder="Batsman 3 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='run3' type="number" placeholder="Runs"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Batsman4' type="text" placeholder="Batsman 4 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='run4' type="number" placeholder="Runs"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Batsman5' type="text" placeholder="Batsman 5 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='run5' type="number" placeholder="Runs"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Batsman6' type="text" placeholder="Batsman 6 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='run6' type="number" placeholder="Runs"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Batsman7' type="text" placeholder="Batsman 7 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='run7' type="number" placeholder="Runs"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Batsman8' type="text" placeholder="Batsman 8 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='run8' type="number" placeholder="Runs"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Batsman9' type="text" placeholder="Batsman 9 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='run9' type="number" placeholder="Runs"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Batsman10' type="text" placeholder="Batsman 10 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='run10' type="number" placeholder="Runs"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Batsman11' type="text" placeholder="Batsman 11 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='run11' type="number" placeholder="Runs"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <!--Bowling Performance-->
+    <h3 id=head>Bowling Performance</h3>
+    <hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Runs' type="text" placeholder="Bowler 1 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='Wick' type="number" placeholder="Wick"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Runs' type="text" placeholder="Bowler 2 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='Wick' type="number" placeholder="Wick"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Runs' type="text" placeholder="Bowler 3 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='Wick' type="number" placeholder="Wick"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Runs' type="text" placeholder="Bowler 4 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='Wick' type="number" placeholder="Wick"></ion-input>
+    </div>
+    <hr id=hr>
+
+    <div>
+      <ion-input id=id color="success" [(ngModel)]='Runs' type="text" placeholder="Bowler 5 name"></ion-input>
+      <ion-input id=id2 color="success" [(ngModel)]='Wick' type="number" placeholder="Wick"></ion-input>
+    </div>
+    <hr id=hr>
+    <div text-end>
+        <ion-button id=create style="width:180px; height: 50px;" fill="outline" color="success" (click)="create()">
+          <ion-icon slot="start" id=padding name="checkmark-circle-outline"></ion-icon>Add Score
+        </ion-button>
+      </div>
+  
+      <div text-end>
+          <ion-button id=back style="width:100px; height: 50px;" color="success" routerLink="/home" (click)="goBack()">
+           Go Back
+          </ion-button>
+      </div>
+</ion-content>
